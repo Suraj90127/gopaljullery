@@ -110,8 +110,10 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[#ecf1f2]">
+    <div>
+
       <Header />
+    <div className="bg-[#ecf1f2]">
       <div>
         <div>
           <img src={img1} alt="banner" className="w-full h-auto" />
@@ -176,6 +178,7 @@ const Home = () => {
           <img src={img6} alt="banner" className="w-full h-auto" />
         </div>
       </div>
+    </div>
       <Footer />
     </div>
   );

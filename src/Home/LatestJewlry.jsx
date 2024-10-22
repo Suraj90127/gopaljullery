@@ -33,7 +33,7 @@ const LatestJawlry = () => {
       modules={[Navigation, Pagination, Autoplay]}
       spaceBetween={20}
       loop={true}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 4000 }}
       className="mb-10"
       breakpoints={{
         100: {

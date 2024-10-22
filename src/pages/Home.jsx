@@ -17,6 +17,11 @@ import Products1 from "../Home/Products1";
 import Eveleye from "../Home/Eveleye";
 import BabyEvil from "../Home/BabyEvil";
 import Dewali from "../Home/Dewali";
+import LikedProduct from "../Home/LikedProduct";
+import Categories from "../Home/Categories";
+import SilverEarings from "../Home/SilverEarings";
+import ShopbyCategory from "../Home/ShopbyCategory";
+import LatestJawlry from "../Home/LatestJewlry";
 
 const Home = () => {
   const categoriesRow1 = [
@@ -177,6 +182,11 @@ const Home = () => {
         <div>
           <img src={img6} alt="banner" className="w-full h-auto" />
         </div>
+        <LikedProduct />
+        <Categories />
+        <SilverEarings />
+        <ShopbyCategory />
+        <LatestJawlry />
       </div>
     </div>
       <Footer />

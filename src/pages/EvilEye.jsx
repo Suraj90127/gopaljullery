@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import img5 from "../assets/instagram_231322_ded479a5-25a4-49d2-b73d-5a63db085817_1950x.jpg";
 import img1 from '../assets/2_1_37b39028-381b-45d0-bbd6-d24974d87c36_360x.webp';
 import img2 from '../assets/0affb67f46e3d5c5c3e3a3ea721f2ebd_360x.webp'; 
 
@@ -35,15 +38,84 @@ const products = [
     originalPrice: 591.56,
     discountedPrice: 492.41,
   },
- 
+  {
+    id: 5,
+    name: "Beautiful Blue Gem Gold Nosepin",
+    image: img1,
+    hoverImage: img2, // New image to show on hover
+    originalPrice: 393.27,
+    discountedPrice: 327.17,
+  },
+  {
+    id: 6,
+    name: "Beautiful Blue Gem Gold Nosepin",
+    image: img1,
+    hoverImage: img2,
+    originalPrice: 591.56,
+    discountedPrice: 492.41,
+  },
+  {
+    id: 7,
+    name: "Beautiful Gold Pink Gem Nosepin",
+    image: img1,
+    hoverImage: img2,
+    originalPrice: 393.27,
+    discountedPrice: 327.17,
+  },
+  {
+    id: 8,
+    name: "Beautiful Gold White Gem Nosepin",
+    image: img1,
+    hoverImage: img2,
+    originalPrice: 591.56,
+    discountedPrice: 492.41,
+  },
+  {
+    id: 9,
+    name: "Beautiful Blue Gem Gold Nosepin",
+    image: img1,
+    hoverImage: img2, // New image to show on hover
+    originalPrice: 393.27,
+    discountedPrice: 327.17,
+  },
+  {
+    id: 10,
+    name: "Beautiful Blue Gem Gold Nosepin",
+    image: img1,
+    hoverImage: img2,
+    originalPrice: 591.56,
+    discountedPrice: 492.41,
+  },
+  {
+    id: 11,
+    name: "Beautiful Gold Pink Gem Nosepin",
+    image: img1,
+    hoverImage: img2,
+    originalPrice: 393.27,
+    discountedPrice: 327.17,
+  },
+  {
+    id: 12,
+    name: "Beautiful Gold White Gem Nosepin",
+    image: img1,
+    hoverImage: img2,
+    originalPrice: 591.56,
+    discountedPrice: 492.41,
+  },
 
 ];
-const Eveleye = () => {
+
+const EvilEye = () => {
     const [hoveredProduct, setHoveredProduct] = useState(null);
   return (
-    <div className="w-full mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">Evil Eye Elegance</h1>
-<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 ">
+    <div>
+     <Header />
+     <div className='bg-[#ecf1f2]'>
+     <div>
+          <img src={img5} alt="banner" className="w-full h-auto" />
+        </div>
+        <div className="w-full mx-auto px-4 py-8">
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-6 ">
         {products.map((product) => (
           <div
             key={product.id}
@@ -81,7 +153,12 @@ const Eveleye = () => {
         <button className='text-blacktext border border-text py-2 px-6 hover:text-white hover:bg-blacktext transition-all'>View More</button>
       </div>
     </div>
+
+     </div>
+     <Footer />
+      
+    </div>
   )
 }
 
-export default Eveleye
+export default EvilEye

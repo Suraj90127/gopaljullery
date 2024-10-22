@@ -67,6 +67,38 @@ const products = [
       originalPrice: 591.56,
       discountedPrice: 492.41,
     },
+    {
+      id: 9,
+      name: "Beautiful Blue Gem Gold Nosepin",
+      image: img1,
+      hoverImage: img2, // New image to show on hover
+      originalPrice: 393.27,
+      discountedPrice: 327.17,
+    },
+    {
+      id: 10,
+      name: "Beautiful Blue Gem Gold Nosepin",
+      image: img1,
+      hoverImage: img2,
+      originalPrice: 591.56,
+      discountedPrice: 492.41,
+    },
+    {
+      id: 11,
+      name: "Beautiful Gold Pink Gem Nosepin",
+      image: img1,
+      hoverImage: img2,
+      originalPrice: 393.27,
+      discountedPrice: 327.17,
+    },
+    {
+      id: 12,
+      name: "Beautiful Gold White Gem Nosepin",
+      image: img1,
+      hoverImage: img2,
+      originalPrice: 591.56,
+      discountedPrice: 492.41,
+    },
 ];
 
 const LikedProduct = () => {

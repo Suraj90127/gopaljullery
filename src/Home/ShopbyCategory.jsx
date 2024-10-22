@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import img2 from "../assets/02-09-2024_Bracelete_02_270x.avif";
+import img1 from "../assets/1_home_370x.webp";
 
 const ShopbyCategory = () => {
 

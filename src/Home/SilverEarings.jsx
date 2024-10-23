@@ -105,7 +105,7 @@ const SilverEarings = () => {
     const [hoveredProduct, setHoveredProduct] = useState(null);
   return (
     <div className="w-full md:w-[90%] lg:w-[80%] mx-auto px-4 py-8">
-    <h1 className="text-3xl font-semibold text-center mb-8">Beautiful Silver Earrings</h1>
+    <h1 className="text-2xl font-semibold text-center mb-8">Beautiful Silver Earrings</h1>
 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 ">
       {products.map((product) => (
         <div

@@ -43,71 +43,16 @@ const products = [
       originalPrice: 393.27,
       discountedPrice: 327.17,
     },
-    {
-      id: 6,
-      name: "Beautiful Blue Gem Gold Nosepin",
-      image: img1,
-      hoverImage: img2,
-      originalPrice: 591.56,
-      discountedPrice: 492.41,
-    },
-    {
-      id: 7,
-      name: "Beautiful Gold Pink Gem Nosepin",
-      image: img1,
-      hoverImage: img2,
-      originalPrice: 393.27,
-      discountedPrice: 327.17,
-    },
-    {
-      id: 8,
-      name: "Beautiful Gold White Gem Nosepin",
-      image: img1,
-      hoverImage: img2,
-      originalPrice: 591.56,
-      discountedPrice: 492.41,
-    },
-    {
-      id: 9,
-      name: "Beautiful Blue Gem Gold Nosepin",
-      image: img1,
-      hoverImage: img2, // New image to show on hover
-      originalPrice: 393.27,
-      discountedPrice: 327.17,
-    },
-    {
-      id: 10,
-      name: "Beautiful Blue Gem Gold Nosepin",
-      image: img1,
-      hoverImage: img2,
-      originalPrice: 591.56,
-      discountedPrice: 492.41,
-    },
-    {
-      id: 11,
-      name: "Beautiful Gold Pink Gem Nosepin",
-      image: img1,
-      hoverImage: img2,
-      originalPrice: 393.27,
-      discountedPrice: 327.17,
-    },
-    {
-      id: 12,
-      name: "Beautiful Gold White Gem Nosepin",
-      image: img1,
-      hoverImage: img2,
-      originalPrice: 591.56,
-      discountedPrice: 492.41,
-    },
+   
 ];
 
-const LikedProduct = () => {
+const MayLike = () => {
     const [hoveredProduct, setHoveredProduct] = useState(null);
 
     return (
         <div className="w-full mx-auto px-4 py-8">
             <h1 className="text-2xl font-semibold text-center mb-8">Product May You Like</h1>
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-6">
                 {products.map((product) => (
                     <div
                         key={product.id}
@@ -141,11 +86,11 @@ const LikedProduct = () => {
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center items-center mt-8">
+            {/* <div className="flex justify-center items-center mt-8">
                 <button className="text-blacktext border border-text py-2 px-6 hover:text-white hover:bg-blacktext transition-all">View More</button>
-            </div>
+            </div> */}
         </div>
     );
 };
 
-export default LikedProduct;
+export default MayLike;

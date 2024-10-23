@@ -28,7 +28,7 @@ const ShopbyCategory = () => {
       ];
   return (
     <div className="w-full md:w-[90%] lg:w-[80%] mx-auto p-2 md:p-6">
-    <h1 className="text-3xl font-semibold text-center mb-8">Shop By Category</h1>
+    <h1 className="text-2xl font-semibold text-center mb-8">Shop By Category</h1>
     {/* First Row */}
     <Swiper
       modules={[Navigation, Pagination, Autoplay]}

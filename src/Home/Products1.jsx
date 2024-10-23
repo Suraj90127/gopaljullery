@@ -74,7 +74,7 @@ const Products1 = () => {
 
   return (
     <div className="w-full md:w-[90%] lg:w-[80%] mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-center mb-8">Unveiling Timeless Beauty</h1>
+      <h1 className="text-2xl font-bold text-center mb-8">Unveiling Timeless Beauty</h1>
 
       <div className="flex justify-center space-x-4 mb-8">
         <button className="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base">

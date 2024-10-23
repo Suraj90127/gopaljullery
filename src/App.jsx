@@ -5,6 +5,14 @@ import Home from "./pages/Home";
 import Collections from "./pages/Collections";
 import EvilEye from "./pages/EvilEye";
 import OfferPromotion from "./pages/OfferPromotion";
+import GiftStore from "./pages/GiftStore";
+import BestSeller from "./pages/BestSeller";
+import SingleProduct from "./pages/SingleProduct"
+import BrandStory from "./pages/BrandStory";
+import About from "./pages/About";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundPolicy from "./pages/RefundPolicy";
+import TermCondition from "./pages/TermCondition";
 
 function App() {
   return (
@@ -14,6 +22,14 @@ function App() {
         <Route path="/collections" element={<Collections />} />
         <Route path="/evil-eye" element={<EvilEye />} />
         <Route path="/offer-promotion" element={<OfferPromotion />} />
+        <Route path="/gift-store" element={<GiftStore />} />
+        <Route path="/best-seller" element={<BestSeller />} />
+        <Route path="/product" element={<SingleProduct />} />
+        <Route path="/story" element={<BrandStory />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/refund" element={<RefundPolicy />} />
+        <Route path="/term-condition" element={<TermCondition />} />
       </Routes>
     </Router>
   );

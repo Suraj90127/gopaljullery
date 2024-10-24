@@ -5,6 +5,7 @@ import img3 from '../assets/9_3_d7497742-0fff-4e01-b593-b33ce6c4f28f_360x.webp';
 import img4 from '../assets/0affb67f46e3d5c5c3e3a3ea721f2ebd_360x.webp';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { CiHeart } from "react-icons/ci";
 
 const Categories = [
   {
@@ -178,6 +179,9 @@ const GiftStore = () => {
             <div className="relative ">
               <div className="absolute top-2 left-2 bg-[#1c3058] text-white px-2 py-1 text-xs font-semibold ">
                 -16%
+              </div>
+              <div className={`absolute top-4 right-4 shadow rounded-full p-2 transition-opacity duration-300 ${hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'}`}>
+                <CiHeart className="text-black text-xl cursor-pointer hover:text-red-600" />
               </div>
               <img
                 src={hoveredProduct === product.id ? product.hoverImage : product.image} 

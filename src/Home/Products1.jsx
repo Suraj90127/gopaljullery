@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
 import img1 from '../assets/c13e77a305046edc03f66624131ddc87_360x.webp';
 import img2 from '../assets/0affb67f46e3d5c5c3e3a3ea721f2ebd_360x.webp'; 
+import { CiHeart } from "react-icons/ci";
+import { Link } from 'react-router-dom';
+
 
 const products = [
   {
     id: 1,
     name: "Beautiful Blue Gem Gold Nosepin",
     image: img1,
-    hoverImage: img2, // New image to show on hover
+    hoverImage: img2,
     originalPrice: 393.27,
     discountedPrice: 327.17,
+    category: "Earrings",
   },
   {
     id: 2,
@@ -18,6 +22,7 @@ const products = [
     hoverImage: img2,
     originalPrice: 591.56,
     discountedPrice: 492.41,
+    category: "Earrings",
   },
   {
     id: 3,
@@ -26,6 +31,7 @@ const products = [
     hoverImage: img2,
     originalPrice: 393.27,
     discountedPrice: 327.17,
+    category: "Diwali Combo",
   },
   {
     id: 4,
@@ -34,79 +40,113 @@ const products = [
     hoverImage: img2,
     originalPrice: 591.56,
     discountedPrice: 492.41,
+    category: "Diwali Combo",
   },
   {
     id: 5,
-    name: "Beautiful Gold Pink Gem Nosepin",
+    name: "Beautiful Diwali Combo Earrings",
     image: img1,
     hoverImage: img2,
     originalPrice: 393.27,
     discountedPrice: 327.17,
+    category: "Diwali Combo",
   },
   {
     id: 6,
-    name: "Beautiful Gold White Gem Nosepin",
+    name: "Beautiful Diwali Combo Earrings",
     image: img1,
     hoverImage: img2,
     originalPrice: 591.56,
     discountedPrice: 492.41,
+    category: "Diwali Combo",
   },
   {
     id: 7,
-    name: "Beautiful Gold Pink Gem Nosepin",
+    name: "Gold Earring with Blue Gem",
     image: img1,
     hoverImage: img2,
     originalPrice: 393.27,
     discountedPrice: 327.17,
+    category: "Earrings",
   },
   {
     id: 8,
-    name: "Beautiful Gold White Gem Nosepin",
+    name: "Gold Earring with White Gem",
     image: img1,
     hoverImage: img2,
     originalPrice: 591.56,
     discountedPrice: 492.41,
+    category: "Earrings",
   },
 ];
 
+
 const Products1 = () => {
   const [hoveredProduct, setHoveredProduct] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+  };
+
+  // Filter products based on selected category
+  const filteredProducts = selectedCategory === "All"
+    ? products
+    : products.filter((product) => product.category === selectedCategory);
 
   return (
     <div className="w-full md:w-[90%] lg:w-[80%] mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold text-center mb-8">Unveiling Timeless Beauty</h1>
 
+      {/* Category buttons */}
       <div className="flex justify-center space-x-4 mb-8">
-        <button className="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base">
-          Under ₹200
+        <button
+          className={`border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base ${selectedCategory === "All" ? 'bg-gray-100' : ''}`}
+          onClick={() => handleCategoryChange("All")}
+        >
+          All Products
         </button>
-        <button className="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base">
+        <button
+          className={`border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base ${selectedCategory === "Earrings" ? 'bg-gray-100' : ''}`}
+          onClick={() => handleCategoryChange("Earrings")}
+        >
           Earrings
         </button>
-        <button className="border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base">
+        <button
+          className={`border border-gray-400 px-4 py-2 rounded hover:bg-gray-100 text-[10px] md:text-base ${selectedCategory === "Diwali Combo" ? 'bg-gray-100' : ''}`}
+          onClick={() => handleCategoryChange("Diwali Combo")}
+        >
           Diwali Combo
         </button>
       </div>
 
+      {/* Products grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-6 ">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
           <div
             key={product.id}
-            className="border rounded-lg overflow-hidden transition duration-500" 
-            onMouseEnter={() => setHoveredProduct(product.id)} 
-            onMouseLeave={() => setHoveredProduct(null)} 
+            className="border rounded-lg overflow-hidden transition duration-500 relative"
+            onMouseEnter={() => setHoveredProduct(product.id)}
+            onMouseLeave={() => setHoveredProduct(null)}
           >
-            <div className="relative ">
-              <div className="absolute top-2 left-2 bg-[#1c3058] text-white px-2 py-1 text-xs font-semibold ">
+            <div className="relative">
+              <div className="absolute top-2 left-2 bg-[#1c3058] text-white px-2 py-1 text-xs font-semibold">
                 -16%
               </div>
+
+              {/* Heart icon on hover */}
+              <div className={`absolute top-4 right-4 shadow rounded-full p-2 transition-opacity duration-300 ${hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'}`}>
+                <CiHeart className="text-black text-xl cursor-pointer" />
+              </div>
+<Link to="/product">
               <img
-                src={hoveredProduct === product.id ? product.hoverImage : product.image} 
+                src={hoveredProduct === product.id ? product.hoverImage : product.image}
                 alt={product.name}
                 width={300}
                 height={300}
-                className="w-full h-auto "
+                className="w-full h-auto"
               />
+              </Link>
             </div>
 
             <div className="pt-3">
@@ -122,8 +162,11 @@ const Products1 = () => {
           </div>
         ))}
       </div>
+
       <div className='flex justify-center items-center mt-8'>
-        <button className='text-blacktext border border-text py-2 px-6 hover:text-white hover:bg-blacktext transition-all'>View More</button>
+        <button className='text-blacktext border border-text py-2 px-6 hover:text-white hover:bg-blacktext transition-all'>
+          View More
+        </button>
       </div>
     </div>
   );

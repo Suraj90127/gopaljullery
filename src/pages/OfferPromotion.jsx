@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import img5 from "../assets/DIWALI10_2100x.jpg";
 import img1 from '../assets/64_18ee44ad-edbd-4c66-b2ba-8e7924e1fb56_540x.jpg';
 import img2 from '../assets/62_b5b0d395-5596-45f1-a426-c31f97dde259_360x.jpg'; 
+import { CiHeart } from "react-icons/ci";
 
 const products = [
   {
@@ -126,6 +127,9 @@ const OfferPromotion = () => {
             <div className="relative ">
               <div className="absolute top-2 left-2 bg-[#1c3058] text-white px-2 py-1 text-xs font-semibold ">
                 -16%
+              </div>
+              <div className={`absolute top-4 right-4 shadow rounded-full p-2 transition-opacity duration-300 ${hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'}`}>
+                <CiHeart className="text-black text-xl cursor-pointer hover:text-red-600" />
               </div>
               <img
                 src={hoveredProduct === product.id ? product.hoverImage : product.image} 

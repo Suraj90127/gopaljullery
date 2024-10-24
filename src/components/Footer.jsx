@@ -12,7 +12,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="overflow-hidden">
       <footer className="bg-cover bg-center  footer-section">
         <div className="container-fluid py-10 w-[90%] mx-auto flex sm:flex-col md:flex-row justify-between">
           <div className="box ">

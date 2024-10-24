@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import img5 from "../assets/instagram_231322_ded479a5-25a4-49d2-b73d-5a63db085817_1950x.jpg";
 import img1 from '../assets/2_1_37b39028-381b-45d0-bbd6-d24974d87c36_360x.webp';
 import img2 from '../assets/0affb67f46e3d5c5c3e3a3ea721f2ebd_360x.webp'; 
+import { CiHeart } from "react-icons/ci";
 
 const products = [
   {
@@ -126,6 +127,9 @@ const EvilEye = () => {
             <div className="relative ">
               <div className="absolute top-2 left-2 bg-[#1c3058] text-white px-2 py-1 text-xs font-semibold ">
                 -16%
+              </div>
+              <div className={`absolute top-4 right-4 shadow rounded-full p-2 transition-opacity duration-300 ${hoveredProduct === product.id ? 'opacity-100' : 'opacity-0'}`}>
+                <CiHeart className="text-black text-xl cursor-pointer hover:text-red-600" />
               </div>
               <img
                 src={hoveredProduct === product.id ? product.hoverImage : product.image} 

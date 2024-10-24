@@ -13,6 +13,10 @@ import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import TermCondition from "./pages/TermCondition";
+import Cart from "./pages/Cart";
+import CheckoutPage from "./pages/CheckOut";
+import Shipping from "./pages/Shiping";
+import Payment from "./pages/Payment";
 
 function App() {
   return (
@@ -30,6 +34,10 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/refund" element={<RefundPolicy />} />
         <Route path="/term-condition" element={<TermCondition />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/shiping" element={<Shipping />} />
+        <Route path="/payment" element={<Payment />} />
       </Routes>
     </Router>
   );
